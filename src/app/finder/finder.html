@@ -1,0 +1,19 @@
+
+<div class="finder-container">
+    <div class="header">
+        <p class="current-path">Current Directory: {{currPath}}</p>
+        <button (click)="addNewFolder()"> + Add New Folder</button>
+    </div>
+    
+    <div class="row-container" *ngFor="let item of folderContent">
+        <span (click)="item.item_type === 'Directory' ? onClick(item) : null">
+            {{item?.item_type === 'Directory' ? '[' + item.name + ']' : item.name}}
+        </span>
+        <div class="btn-actions" *ngIf="!item?.backward">
+            <button (click)="renameFile(item)">Rename</button>
+            <button (click)="deleteFile(item)">Delete</button>
+        </div>
+    </div>
+</div>  
+
+

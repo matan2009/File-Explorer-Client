@@ -1,0 +1,24 @@
+.finder-container{ 
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    gap: 20px;
+    margin: 10px;
+}
+
+.row-container{
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.btn-actions{
+    display: flex;
+    gap: 5px;
+}
